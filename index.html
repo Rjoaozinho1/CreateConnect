@@ -27,22 +27,6 @@
         })();
     </script>
 
-    <script src="https://unpkg.com/blip-chat-widget@1.6.*" type="text/javascript"></script>
-    <script>
-        (function () {
-            window.onload = function () {
-                var blipClient = new BlipChat();
-                blipClient.withAppKey('ZmFtYXJ0cm91dGVydGVzdGU6ZjhlY2ZiMDUtZjA4Ni00YmE2LWFiMmUtMzdmMTMxNTFlM2Y1')
-                    .withEventHandler(BlipChat.LOAD_EVENT, function () {
-                        blipClient.sendMessage({
-                            "type": "text/plain",
-                            "content": "Essa é minha primeira mensagem"
-                        });
-                    })
-                    .build();
-            }
-        })();
-    </script>
 
 </body>
 
