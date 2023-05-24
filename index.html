@@ -14,18 +14,19 @@
     <script>
         (function () {
             window.onload = function () {
-                var blipClient = new BlipChat()
-                    .withAppKey('ZmFtYXJ0cm91dGVydGVzdGU6ZjhlY2ZiMDUtZjA4Ni00YmE2LWFiMmUtMzdmMTMxNTFlM2Y1')
-                    .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT, function () {
+                var blipClient = new BlipChat();
+                blipClient.withAppKey('ZmFtYXJ0cm91dGVydGVzdGU6ZjhlY2ZiMDUtZjA4Ni00YmE2LWFiMmUtMzdmMTMxNTFlM2Y1')
+                    .withEventHandler(BlipChat.LOAD_EVENT, function () {
                         blipClient.sendMessage({
                             "type": "text/plain",
-                            "content": "Comercial"
+                            "content": "Olá, me dê uma ajuda."
                         });
-                    });
-                blipClient.build();
+                    })
+                    .build();
             }
         })();
     </script>
+    
 
 
 </body>
