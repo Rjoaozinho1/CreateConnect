@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script src="https://unpkg.com/blip-chat-widget@1.6.*" type="text/javascript"></script>
+    <script>
+        (function () {
+            window.onload = function () {
+                var blipClient = new BlipChat()
+                    .withAppKey('ZmFtYXJ0cm91dGVydGVzdGU6ZjhlY2ZiMDUtZjA4Ni00YmE2LWFiMmUtMzdmMTMxNTFlM2Y1')
+                    .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT, function () {
+                        blipClient.sendMessage({
+                            "type": "text/plain",
+                            "content": "Comercial"
+                        });
+                    });
+                blipClient.build();
+            }
+        })();
+    </script>
+
+    <script src="https://unpkg.com/blip-chat-widget@1.6.*" type="text/javascript"></script>
+    <script>
+        (function () {
+            window.onload = function () {
+                var blipClient = new BlipChat();
+                blipClient.withAppKey('ZmFtYXJ0cm91dGVydGVzdGU6ZjhlY2ZiMDUtZjA4Ni00YmE2LWFiMmUtMzdmMTMxNTFlM2Y1')
+                    .withEventHandler(BlipChat.LOAD_EVENT, function () {
+                        blipClient.sendMessage({
+                            "type": "text/plain",
+                            "content": "Essa é minha primeira mensagem"
+                        });
+                    })
+                    .build();
+            }
+        })();
+    </script>
+
+</body>
+
+</html>
