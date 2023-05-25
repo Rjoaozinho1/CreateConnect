@@ -28,10 +28,29 @@
 				  fullName: 'John Doe',
 				  email:'johndoe@gmail.com',
 				  phoneNumber: '+15055034455',
-				  city: 'Decatur',
 				})
                 .build();
+		BlipClient.withoutHistory()
         }
+    })();
+</script>
+	<script src="https://unpkg.com/blip-chat-widget@1.6.*" type="text/javascript"></script>
+<script>
+    (function () {
+            window.onload = function () {
+                var blipClient = new BlipChat();
+                blipClient
+                .withAppKey('ZmFtYXJ0cm91dGVydGVzdGU6ZjhlY2ZiMDUtZjA4Ni00YmE2LWFiMmUtMzdmMTMxNTFlM2Y1')
+                .withAccount({
+                    fullName: 'John Doe',
+                    email:'johndoe@gmail.com',
+                    phoneNumber: '+15055034455',
+                    extras:{
+                        interno: 'aluno'
+                    }
+                })
+                .build();
+            }
     })();
 </script>
 
