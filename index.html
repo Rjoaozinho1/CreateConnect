@@ -33,7 +33,27 @@
                 .build();
         }
     })();
+	 (function () {
+                 window.onload = function () {
+                     var blipClient = new BlipChat();
+                     blipClient
+                     .withAppKey('ZmFtYXJ0cm91dGVydGVzdGU6ZjhlY2ZiMDUtZjA4Ni00YmE2LWFiMmUtMzdmMTMxNTFlM2Y1')
+                     .withAccount({
+                         fullName: 'MARCAO',   
+                         email:'johndoe@gmail.com',
+                         phoneNumber: '+15055034666',
+                         city: 'Decatur',
+                         extras:{
+                             interno: 'aluno'
+                         }
+                     })
+                     blipClient.withoutHistory()
+                     .build();
+                 }
+         })();
 </script>
+	
+	
 
 </body>
 
