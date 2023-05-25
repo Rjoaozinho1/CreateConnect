@@ -19,28 +19,19 @@
                 .withAppKey('ZmFtYXJ0cm91dGVydGVzdGU6ZjhlY2ZiMDUtZjA4Ni00YmE2LWFiMmUtMzdmMTMxNTFlM2Y1')
                 .withButton({"color":"#143687","icon":"https://blipmediastore.blob.core.windows.net/public-medias/Media_c0658493-d016-47c0-a94d-45af78e73f7b"})
                 .withCustomCommonUrl('https://grupo-famart-de-educacao.chat.blip.ai/')
-                
+                .withAuth({
+				  authType: BlipChat.DEV_AUTH,
+				  userIdentity: '1234567',
+				  userPassword: 'MTIzNDU2',
+				})
+				.withAccount({
+				  fullName: 'John Doe',
+				  email:'johndoe@gmail.com',
+				  phoneNumber: '+15055034455',
+				  city: 'Decatur',
+				})
                 .build();
         }
-    })();
-</script>
-	<script src="https://unpkg.com/blip-chat-widget@1.6.*" type="text/javascript"></script>
-<script>
-    (function () {
-            window.onload = function () {
-                var blipClient = new BlipChat();
-                blipClient
-                .withAppKey('ZmFtYXJ0cm91dGVydGVzdGU6ZjhlY2ZiMDUtZjA4Ni00YmE2LWFiMmUtMzdmMTMxNTFlM2Y1')
-                .withAccount({
-                    fullName: 'John Doe',
-                    email:'johndoe@gmail.com',
-                    phoneNumber: '+15055034455',
-                    extras:{
-                        interno: 'aluno'
-                    }
-                })
-                .build();
-            }
     })();
 </script>
 
