@@ -15,18 +15,22 @@
         (function () {
             window.onload = function () {
                 var blipClient = new BlipChat();
-                blipClient.withAppKey('ZmFtYXJ0cm91dGVydGVzdGU6ZjhlY2ZiMDUtZjA4Ni00YmE2LWFiMmUtMzdmMTMxNTFlM2Y1')
-                    .withEventHandler(BlipChat.LOAD_EVENT, function () {
-                        blipClient.sendMessage({
-                            "type": "text/plain",
-                            "content": "Olá, me dê uma ajuda."
-                        });
+                blipClient
+                    .withAppKey('ZmFtYXJ0cm91dGVydGVzdGU6ZjhlY2ZiMDUtZjA4Ni00YmE2LWFiMmUtMzdmMTMxNTFlM2Y1')
+                    .withAccount({
+                        fullName: 'John Doe',
+                        email: 'johndoe@gmail.com',
+                        phoneNumber: '+15055034455',
+                        extras: {
+                            interno: 'aluno'
+                        }
                     })
+                blipClient.withoutHistory()
                     .build();
             }
         })();
     </script>
-    
+
 
 
 </body>
