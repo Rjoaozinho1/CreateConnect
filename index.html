@@ -34,6 +34,26 @@
         }
     })();
 </script>
+	<script src="https://unpkg.com/blip-chat-widget@1.6.*" type="text/javascript"></script>
+<script>
+    (function () {
+            window.onload = function () {
+                var blipClient = new BlipChat();
+                blipClient
+                .withAppKey('YOUR-BLIPCHAT-API-KEY')
+                .withAccount({
+                    fullName: 'John Doe',
+                    email:'johndoe@gmail.com',
+                    phoneNumber: '+15055034455',
+                    city: 'Decatur',
+                    extras:{
+                        plan: 'gold'
+                    }
+                })
+                .build();
+            }
+    })();
+</script>
 
 
 
