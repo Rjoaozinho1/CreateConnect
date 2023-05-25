@@ -36,26 +36,27 @@
     })();
 </script>
 	
-	 <script>
-         (function () {
-                 window.onload = function () {
-                     var blipClient = new BlipChat();
-                     blipClient
-                     .withAppKey('ZmFtYXJ0cm91dGVydGVzdGU6ZjhlY2ZiMDUtZjA4Ni00YmE2LWFiMmUtMzdmMTMxNTFlM2Y1')
-                     .withAccount({
-                         fullName: 'MARRRRRRRRRRRRRRRRRRRR',   
-                         email:'aaaa@gmail.com',
-                         phoneNumber: '+15055034666',
-                         city: 'Decatur',
-                         extras:{
-                             plan: 'gold'
-                         }
-                     })
-                     blipClient.withoutHistory()
-                     .build();
-                 }
-         })();
-      </script>
+	 <script src="https://unpkg.com/blip-chat-widget@1.6.*" type="text/javascript"></script>
+<script>
+    (function () {
+            window.onload = function () {
+                var blipClient = new BlipChat();
+                blipClient
+                .withAppKey('YOUR-BLIPCHAT-API-KEY')
+                .withAccount({
+                    fullName: 'John Doe',
+                    email:'johndoe@gmail.com',
+                    phoneNumber: '+15055034455',
+                    city: 'Decatur',
+                    extras:{
+                        plan: 'gold'
+                    }
+                })
+		blipClient.withoutHistory();
+                .build();
+            }
+    })();
+</script>
 
 	
 </body>
